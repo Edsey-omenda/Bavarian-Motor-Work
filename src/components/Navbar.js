@@ -10,13 +10,11 @@ export default function Home(){
   <div className="bg-dark p-4">
   <ul className="nav nav-pills mb-3" id="pills-tabContent" role="tablist">
         < li className="nav-item" role="presentation">
-        <Link className='nav-link ' to="/">Home</Link>
+        <Link className='nav-link text-blue h4' to="/">Home</Link>
+        <Link className='nav-link text-blue h4' to="/">Models</Link>
+        <Link className='nav-link text-blue h4' to="/">Reviews</Link>
         </li>
  </ul>
-  <Link className='nav-link text-white h4' to="/">Home</Link>
-    <h5 className="text-white h4">Home</h5>
-    <h5 className="text-white h4">Models</h5>
-    <h5 className="text-white h4">Reviews</h5>
   </div>
 </div>
 <nav className="navbar navbar-dark bg-dark">
