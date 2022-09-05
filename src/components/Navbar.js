@@ -11,8 +11,8 @@ export default function Home(){
   <ul className="nav nav-pills mb-3" id="pills-tabContent" role="tablist">
         < li className="nav-item" role="presentation">
         <Link className='nav-link text-blue h4' to="/">Home</Link>
-        <Link className='nav-link text-blue h4' to="/">Models</Link>
-        <Link className='nav-link text-blue h4' to="/">Reviews</Link>
+        <Link className='nav-link text-blue h4' to="/models">Models</Link>
+        <Link className='nav-link text-blue h4' to="/reviews">Reviews</Link>
         </li>
  </ul>
   </div>
