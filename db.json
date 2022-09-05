@@ -5,7 +5,7 @@
           "title": "BMW:X1",
           "thumbnail": "https://www.bmwusa.com/content/dam/bmwusa/common/vehicles/2022/my23/x1/overview/desktop/BMW-MY23-X1-Overview-FMA-Desktop.jpg",
           "short_description": "There's nothing shy about the 2023 BMW X1. An all-new exterior design and a refined, tech-forward interior puts the pride in your drive on display",
-          "release_year": "2009"
+          "release_date": "2009"
           },
           {
               "id": 2,
@@ -38,7 +38,7 @@
           {
               "id": 6,
               "title": "BMW:X7",
-              "thumbnail": "https://www.bmwusa.com/content/dam/bmwusa/common/XModels/X7/overview/BMW-Text-Background-Desktop.png",
+              "thumbnail": "https://www.bmwusa.com/content/dam/bmwusa/common/vehicles/2022/my23/x-models/x7/overview/desktop/BMW-MYXX-Model-Overview-Form-01-Desktop.jpg",
               "short_description": "Luxurious finishes, elevated comfort, and modern technology the 2023 BMW X7 is here and ready to exceed all expectations.",
               "release_date": "2014"
           },
