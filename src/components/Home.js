@@ -9,22 +9,20 @@ export default function Home(){
 
 
     return(
-        <div className="text-bg-secondary p-3">
+        <div className="text-bg-body">
         <div className='container'>Home
-        {/* <center> */}
+        <center>
         <div className='row' >
           <h2>Welcome to Bavarian Motor Works</h2>
           <Bavarian />
-          {/* <div className="col m-2"> */}
-          <div className='card' style={{width : 25 + 'rem'}} > 
-          <Interior />
+          <div className="row">
+          <Interior /> <br></br>
           <Cosy  />
           <Garage />
           <Parts />
           </div>
           </div>
-          {/* </div> */}
-        {/* </center> */}
+        </center>
         </div>
         </div>
     )
