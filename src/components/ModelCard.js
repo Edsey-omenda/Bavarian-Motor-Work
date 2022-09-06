@@ -1,6 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ModelItem from './Upmodel';
+import  EditModel from './EditModel'
 
-export default function ModelCard({modelThumbnail, modelTitle, id, modelDescription, modelReleaseYear}){
+export default function ModelCard({modelThumbnail, modelTitle, modelDescription, modelReleaseYear, modelCity, onUpdateModel, onDeleteModel}){
+     
+    const [models, setModels] = useState([]);
+
+    function handleDeleteModel(deletedModel) {
+        console.log("In Models:", deletedModel);
+      }
+
     return(
         <div className="col m-2">
         <div className='card' style={{width : 25 + 'rem'}} > 
@@ -8,7 +17,13 @@ export default function ModelCard({modelThumbnail, modelTitle, id, modelDescript
             />
             Model: &nbsp;{modelTitle}<br></br>
             ReleaseYear: &nbsp;{modelReleaseYear}<br></br>
-            Description: &nbsp;{modelDescription}
+            Description: &nbsp;{modelDescription}<br></br>
+            City:   &nbsp;{modelCity}
+            <ModelItem 
+            onDeleteModel={handleDeleteModel}
+            onUpdateModel={onUpdateModel}
+            />
+            <EditModel />
         </div>
         </div>
          

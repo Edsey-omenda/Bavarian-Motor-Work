@@ -12,13 +12,14 @@ export default function Models(){
         setModels(models)
         // console.log(models)
     })
-    })
+    },[])
 
     let myModels = models.map((model) => (<ModelCard 
         modelTitle={model.title} 
         modelThumbnail={model.thumbnail} 
         modelDescription={model.short_description} 
         modelReleaseYear={model.release_date} 
+        modelCity={model.city}
         id={model.id}
         key={model.id} />))
 
