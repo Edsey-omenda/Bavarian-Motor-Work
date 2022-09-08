@@ -1,14 +1,20 @@
-import React, {useState} from 'react';
-import ModelItem from './Upmodel';
-import  EditModel from './EditModel'
+import React from 'react';
+// import  EditModel from './EditModel'
 
-export default function ModelCard({modelThumbnail, modelTitle, modelDescription, modelReleaseYear, modelCity, onUpdateModel, onDeleteModel}){
+export default function ModelCard({modelThumbnail, modelTitle, modelDescription, modelReleaseYear, modelCity, models, setModels}){
      
-    const [models, setModels] = useState([]);
-
-    function handleDeleteModel(deletedModel) {
-        console.log("In Models:", deletedModel);
-      }
+     
+    function handleDeleteClick(id){
+        fetch(`http://localhost:4000/models/${id}`,{
+          method:"DELETE",
+        })
+        .then(res => res.json())
+        .then(() => {
+          const deleteModel = models.filter((models) => models.id !== id)
+          setModels(deleteModel)
+        })
+      
+    }
 
     return(
         <div className="col m-2">
@@ -19,11 +25,10 @@ export default function ModelCard({modelThumbnail, modelTitle, modelDescription,
             ReleaseYear: &nbsp;{modelReleaseYear}<br></br>
             Description: &nbsp;{modelDescription}<br></br>
             City:   &nbsp;{modelCity}
-            <ModelItem 
-            onDeleteModel={handleDeleteModel}
-            onUpdateModel={onUpdateModel}
-            />
-            <EditModel />
+
+            <button className="remove" onClick={(e) =>handleDeleteClick(models.id)}> <span role="img" aria-label="delete">
+              🗑
+            </span>Delete</button>
         </div>
         </div>
          

@@ -2,8 +2,8 @@ import React  from 'react'
 import Navbar from  './Navbar'
 import Home from './Home'
 import Models from './Models';
-import Reviews from './Review';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import ModelForm from './ModelForm';
 
 export default  function App(){
       return(
@@ -15,7 +15,7 @@ export default  function App(){
           <Routes>
           <Route  exact path="/" element={<Home />}></Route>
           <Route  exact path="/models" element={<Models />}></Route>
-          <Route  exact path="/reviews" element={<Reviews />}></Route>
+          <Route  exact path="/newmodel" element={<ModelForm />}></Route>
           </Routes>
           </Router>
        

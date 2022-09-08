@@ -12,7 +12,7 @@ export default function Home(){
         < li className="nav-item" role="presentation">
         <Link className='nav-link text-blue h4' to="/">Home</Link>
         <Link className='nav-link text-blue h4' to="/models">Models</Link>
-        <Link className='nav-link text-blue h4' to="/reviews">Reviews</Link>
+        <Link className='nav-link text-blue h4' to="/newmodel">NewModels</Link>
         </li>
  </ul>
   </div>

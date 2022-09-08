@@ -1,21 +1,24 @@
 
-import React from "react";
+import React, {useState} from 'react';
 
-function ModelItem({ id, onDeleteModel }) {
+function ModelItem({ models, setModels}) {
 
 
-  function handleDeleteClick(){
+  function handleDeleteClick(id){
       fetch(`http://localhost:4000/models/${id}`,{
         method:"DELETE",
       })
       .then(res => res.json())
-      .then(()=> console.log("deleted!"))
-    onDeleteModel(id)
+      .then(() => {
+        const deleteModel = models.filter((models) => models.id !== id)
+        setModels(deleteModel)
+      })
+    
   }
 
   return (
     <div>
-      <button className="remove" onClick={handleDeleteClick}> <span role="img" aria-label="delete">
+      <button className="remove" onDeleteModel={(e) =>handleDeleteClick(model.id)}> <span role="img" aria-label="delete">
               🗑
             </span>Delete</button>
     </div>
