@@ -30,7 +30,7 @@ export default function NewModelForm({title, short_description, thumbnail, relea
 
   function handleSubmitNewModel(event){
     event.preventDefault();
-    const newPoem = {
+    const newModel = {
       title: newTitle,
       thumbnail: newThumbnail,
       short_description: newDescription,
@@ -43,7 +43,7 @@ export default function NewModelForm({title, short_description, thumbnail, relea
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newPoem),
+    body: JSON.stringify(newModel),
    })
    .then((r) => r.json())
     .then((newModel) => setModels([...models,newModel]));
