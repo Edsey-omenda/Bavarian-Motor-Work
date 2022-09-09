@@ -22,7 +22,8 @@ export default function Models(){
         modelReleaseYear={model.release_date} 
         modelCity={model.city}
         id={model.id}
-        key={model.id} />
+        key={model.id}
+        />
         ))
 
       
@@ -33,6 +34,7 @@ export default function Models(){
           <div className='row'>
             {myModels}
           </div>
+          {/* <button value ={models.id}  style={{"marginLeft":'30px'}} onClick={handleDeleteModel}  >Delete Model</button> */}
         </div>
         </div>
     )
