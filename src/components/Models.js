@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ModelCard from './ModelCard';
 
 
+
 export default function Models(){
     const[models, setModels] = useState([])
 
     useEffect(() =>{
-        fetch("http://localhost:4000/models")
+        fetch("http://localhost:9292/models")
         .then(response => response.json())
         .then((models) =>{
         setModels(models)
@@ -21,8 +22,10 @@ export default function Models(){
         modelReleaseYear={model.release_date} 
         modelCity={model.city}
         id={model.id}
-        key={model.id} />))
+        key={model.id} />
+        ))
 
+      
 
     return(
         <div className="text-bg-info p-3">
