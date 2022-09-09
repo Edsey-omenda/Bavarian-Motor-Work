@@ -38,7 +38,7 @@ export default function NewModelForm({title, short_description, thumbnail, relea
       city: newCity
     } 
 
-    fetch("http://localhost:4000/models",{
+    fetch("http://localhost:9292/models",{
     method: "POST",
     headers: {
       "Content-Type": "application/json",
