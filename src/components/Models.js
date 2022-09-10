@@ -7,7 +7,7 @@ export default function Models(){
     const[models, setModels] = useState([])
 
     useEffect(() =>{
-        fetch("http://localhost:9292/models")
+        fetch("https://bavarian-api.herokuapp.com/models")
         .then(response => response.json())
         .then((models) =>{
         setModels(models)

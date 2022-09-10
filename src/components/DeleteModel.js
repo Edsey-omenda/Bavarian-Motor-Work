@@ -7,7 +7,7 @@ export  default  function Delete(){
  
     function handleDeleteModel(e){
      let id = e.target.value
-     fetch(`http://localhost:9292/models/${id}`,{
+     fetch(`https://bavarian-api.herokuapp.com/models/${id}`,{
        method:"DELETE"
      })
      .then((res)=>res.json())
