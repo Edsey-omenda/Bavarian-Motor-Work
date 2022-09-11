@@ -4,7 +4,7 @@
 ## INTRODUCTION
 
 * Bavarian Motor  work is a web  that  shows  different  type  of  BMW models.
-* In  detail  gives attributes of  the  specific  model
+* In  detail  gives attributes of  the  specific  model.
       * Title of the model.
       * Thumbnail of  the model.
       * Description of the model.
@@ -29,7 +29,7 @@
 
 The Project  is  hosted on the  gh-pages  live link  below.
 
-[backend]  : https://edsey-omenda.github.io/Bavarian-Motor-Work/
+[livelink]  : https://edsey-omenda.github.io/Bavarian-Motor-Work/
 
 * Author By James Omenda - Full stack developer
 
