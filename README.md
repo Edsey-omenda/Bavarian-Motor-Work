@@ -5,11 +5,11 @@
 
 * Bavarian Motor  work is a web  that  shows  different  type  of  BMW models.
 * In  detail  gives attributes of  the  specific  model.
-      * Title of the model.
-      * Thumbnail of  the model.
-      * Description of the model.
-      * Year of  release.
-      * City of model origin
+  * Title of the model.
+  * Thumbnail of  the model.
+  * Description of the model.
+  * Year of  release.
+  * City of model origin
 
 * The  website allows  a  user  to  delete and post new  model in the app.
 
