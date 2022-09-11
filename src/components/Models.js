@@ -15,6 +15,7 @@ export default function Models(){
     })
     },[])
 
+
     let myModels = models.map((model) => (<ModelCard 
         modelTitle={model.title} 
         modelThumbnail={model.thumbnail} 
@@ -22,6 +23,7 @@ export default function Models(){
         modelReleaseYear={model.release_date} 
         modelCity={model.city}
         id={model.id}
+        setModels={setModels}
         key={model.id}
         />
         ))
@@ -32,9 +34,9 @@ export default function Models(){
         <div className="text-bg-info p-3">
         <div className='container'>My Models
           <div className='row'>
+            {/* <Delete /> */}
             {myModels}
           </div>
-          {/* <button value ={models.id}  style={{"marginLeft":'30px'}} onClick={handleDeleteModel}  >Delete Model</button> */}
         </div>
         </div>
     )
