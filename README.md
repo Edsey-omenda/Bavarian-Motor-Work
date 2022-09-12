@@ -32,7 +32,7 @@
 
 The Project  is  hosted on the  gh-pages  live link  below.
 
-[livelink]  : https://edsey-omenda.github.io/Bavarian-Motor-Work/
+[livelink]  : https://edsey-omenda.github.io/Bavarian
 
 * Author By James Omenda - Full stack developer
 
