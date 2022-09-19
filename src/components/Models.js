@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import ModelCard from './ModelCard';
-
 
 
 export default function Models(){
     const[models, setModels] = useState([])
 
     useEffect(() =>{
-        fetch("https://bavarian-api.herokuapp.com/models")
+        fetch("http://localhost:9292/models")
         .then(response => response.json())
         .then((models) =>{
         setModels(models)
@@ -15,28 +13,42 @@ export default function Models(){
     })
     },[])
 
-
-    let myModels = models.map((model) => (<ModelCard 
-        modelTitle={model.title} 
-        modelThumbnail={model.thumbnail} 
-        modelDescription={model.short_description} 
-        modelReleaseYear={model.release_date} 
-        modelCity={model.city}
-        id={model.id}
-        setModels={setModels}
-        key={model.id}
-        />
-        ))
-
-      
+    function handleDelete(id) {
+      fetch(`http://localhost:9292/models/${id}`, {
+        method: "DELETE",
+      })
+        .then((r) => r.json())
+        .then(() => {
+          const deleteModel = models.filter((model) => model.id !== id);
+          setModels(deleteModel);
+        });
+    }
 
     return(
+      <div className="col m-2"> 
+      <div className='card ' style={{width : 25 + 'rem'}}>
         <div className="text-bg-info p-3">
-        <div className='container'>My Models
-          <div className='row'>
-            {/* <Delete /> */}
-            {myModels}
-          </div>
+          {/* <div className='card' style={{width : 25 + 'rem'}}> */}
+       <h1> My Models </h1>  {
+                models.map((model) => ( 
+                    <ol key = { model.id } >
+                        &nbsp;{model.title} 
+                        <img src={model.thumbnail} className="card-img-top" alt={model.title}/>
+                        Description:&nbsp;{model.short_description} <br></br>
+                        ReleaseYear:&nbsp;{model.release_date} <br></br>
+                        City:&nbsp;{model.city} <br></br>
+
+                        <button className="App-button" style={{backgroundColor: "red"}}onClick={(e) => (
+                        handleDelete(model.id)
+                      )} ><span role="img" aria-label="delete">
+                      🗑
+                    </span>Delete</button >
+                        </ol>
+                        
+                    ))
+                   
+                }
+        </div>
         </div>
         </div>
     )

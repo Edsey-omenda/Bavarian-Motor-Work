@@ -1,6 +1,7 @@
 import React from 'react';
 import Delete from './DeleteModel';
 
+
 export default function ModelCard({ modelThumbnail, modelTitle, modelDescription, modelReleaseYear, modelCity}){
 
   
@@ -14,8 +15,9 @@ export default function ModelCard({ modelThumbnail, modelTitle, modelDescription
             Description: &nbsp;{modelDescription}<br></br>
             City:   &nbsp;{modelCity}
             
+            <Delete />
         </div>
-        <Delete />
+      
           
         </div>
          
