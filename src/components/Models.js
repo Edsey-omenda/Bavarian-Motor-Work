@@ -26,7 +26,7 @@ export default function Models(){
 
     return(
       <div className="col m-2"> 
-      <div className='card ' style={{width : 25 + 'rem'}}>
+      <div className='card ' style={{width :25 + 'rem'}}>
         <div className="text-bg-info p-3">
           {/* <div className='card' style={{width : 25 + 'rem'}}> */}
        <h1> My Models </h1>  {
